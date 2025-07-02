@@ -18,6 +18,7 @@ _inputs:
             - a-simple-gallery
             - a-small-business-template
             - and-ldquo-their-customer-service-is-second-to-none-and-rdquo
+            - changing-this-heading
             - image-gallery
             - let-your-features-shine
             - list-your-services-or-products
@@ -28,7 +29,6 @@ _inputs:
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/home.yaml)"
           inputs:
-            - empower-your-business-with-this-brilliant-template
             - eyebrow-heading
   a-component-to-showcase-your-brand:
     label: A component to showcase your brand
@@ -84,20 +84,14 @@ _inputs:
       icon: translate
       content: |
         “Their customer service is second to none.”
-  empower-your-business-with-this-brilliant-template:
-    label: Empower your business with this brilliant ...
+  changing-this-heading:
+    label: Changing this heading
     hidden: false
     type: textarea
     options: {}
     comment: "[See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=Empower%20yo\
-      ur%20business,this%20brilliant%20template)"
-    context:
-      open: false
-      title: Untranslated Text
-      icon: translate
-      content: |
-        Empower your business with this brilliant template
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=Changing%20t\
+      his%20heading)"
   eyebrow-heading:
     label: Eyebrow Heading
     hidden: false
@@ -153,7 +147,7 @@ a-featured-icons-block: ""
 a-simple-gallery: ""
 a-small-business-template: ""
 and-ldquo-their-customer-service-is-second-to-none-and-rdquo: ""
-empower-your-business-with-this-brilliant-template: Croissant, Baguette, Oui Oui
+changing-this-heading: ""
 eyebrow-heading: TRANSLATEDDDDDDDD
 image-gallery: ""
 let-your-features-shine: ""

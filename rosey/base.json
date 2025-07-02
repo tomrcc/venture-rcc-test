@@ -107,6 +107,14 @@
       },
       "total": 1
     },
+    "changing-this-heading": {
+      "original": "\n      Changing this heading\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
     "common:book-now": {
       "original": "Book Now",
       "value": null,
@@ -150,14 +158,6 @@
         "contact/index.html": 2
       },
       "total": 2
-    },
-    "empower-your-business-with-this-brilliant-template": {
-      "original": "\n      Empower your business with this brilliant template\n    ",
-      "value": null,
-      "pages": {
-        "index.html": 1
-      },
-      "total": 1
     },
     "eyebrow-heading": {
       "original": "\n      Eyebrow Heading\n    ",

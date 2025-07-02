@@ -51,6 +51,10 @@
 		"original": "Booking form",
 		"value": "Booking form"
 	},
+	"changing-this-heading": {
+		"original": "Changing this heading",
+		"value": "Changing this heading"
+	},
 	"common:book-now": {
 		"original": "Book Now",
 		"value": "Francais"
@@ -66,10 +70,6 @@
 	"contact-us": {
 		"original": "Contact us",
 		"value": "Contact us"
-	},
-	"empower-your-business-with-this-brilliant-template": {
-		"original": "Empower your business with this brilliant template",
-		"value": "Croissant, Baguette, Oui Oui"
 	},
 	"eyebrow-heading": {
 		"original": "Eyebrow Heading",
