@@ -1,16 +1,16 @@
 _inputs:
   $:
     type: object
-    comment: >-
-      [index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
-      history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/translations/fr/home.yaml)
+    comment: "[index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
+      history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/\
+      translations/fr/home.yaml)"
     options:
       place_groups_below: false
       groups:
         - heading: Still to translate (fr)
-          comment: >-
-            [index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
-            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/translations/fr/home.yaml)
+          comment: "[index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/home.yaml)"
           inputs:
             - a-component-to-showcase-your-brand
             - a-contact-block
@@ -18,66 +18,66 @@ _inputs:
             - a-simple-gallery
             - a-small-business-template
             - and-ldquo-their-customer-service-is-second-to-none-and-rdquo
-            - changing-this-heading
             - image-gallery
             - let-your-features-shine
             - list-your-services-or-products
             - tag-or-label-headline
             - what-your-customers-say
         - heading: Already translated (fr)
-          comment: >-
-            [index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
-            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/translations/fr/home.yaml)
+          comment: "[index.html](https://frank-hare.cloudvent.net/index.html)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/home.yaml)"
           inputs:
+            - changing-this-heading
             - eyebrow-heading
   a-component-to-showcase-your-brand:
     label: A component to showcase your brand
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20component%20to%20showcase%20your%20brand)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20componen\
+      t%20to%20showcase%20your%20brand)"
   a-contact-block:
     label: A contact block
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20contact%20block)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20contact%\
+      20block)"
   a-featured-icons-block:
     label: A featured icons block
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20featured%20icons%20block)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20featured\
+      %20icons%20block)"
   a-simple-gallery:
     label: a simple gallery
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=a%20simple%20gallery)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=a%20simple%2\
+      0gallery)"
   a-small-business-template:
     label: A small business template
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20small%20business%20template)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=A%20small%20\
+      business%20template)"
   and-ldquo-their-customer-service-is-second-to-none-and-rdquo:
     label: “Their customer service is second to none....
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=%E2%80%9CTheir%20customer%20service,second%20to%20none%E2%80%9D)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=%E2%80%9CThe\
+      ir%20customer%20service,second%20to%20none%E2%80%9D)"
     context:
       open: false
       title: Untranslated Text
@@ -89,68 +89,68 @@ _inputs:
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=Changing%20this%20heading)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=Changing%20t\
+      his%20heading)"
   eyebrow-heading:
     label: Eyebrow Heading
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=Eyebrow%20Heading)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=Eyebrow%20He\
+      ading)"
   image-gallery:
     label: Image Gallery
     hidden: false
     type: text
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=Image%20Gallery)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=Image%20Gall\
+      ery)"
   let-your-features-shine:
     label: let your features shine
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=let%20your%20features%20shine)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=let%20your%2\
+      0features%20shine)"
   list-your-services-or-products:
     label: List your services or products
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=List%20your%20services%20or%20products)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=List%20your%\
+      20services%20or%20products)"
   tag-or-label-headline:
     label: Tag or label headline
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=Tag%20or%20label%20headline)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=Tag%20or%20l\
+      abel%20headline)"
   what-your-customers-say:
     label: What your customers say
     hidden: false
     type: textarea
     options: {}
-    comment: >-
-      [See in
-      context](https://frank-hare.cloudvent.net/index.html#:~:text=What%20your%20customers%20say)
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/index.html#:~:text=What%20your%\
+      20customers%20say)"
 urlTranslation: index.html
-a-component-to-showcase-your-brand: ''
-a-contact-block: ''
-a-featured-icons-block: ''
-a-simple-gallery: ''
-a-small-business-template: ''
-and-ldquo-their-customer-service-is-second-to-none-and-rdquo: ''
+a-component-to-showcase-your-brand: ""
+a-contact-block: ""
+a-featured-icons-block: ""
+a-simple-gallery: ""
+a-small-business-template: ""
+and-ldquo-their-customer-service-is-second-to-none-and-rdquo: ""
 changing-this-heading: New translation
 eyebrow-heading: TRANSLATEDDDDDDDD
-image-gallery: ''
-let-your-features-shine: ''
-list-your-services-or-products: ''
-tag-or-label-headline: ''
-what-your-customers-say: ''
+image-gallery: ""
+let-your-features-shine: ""
+list-your-services-or-products: ""
+tag-or-label-headline: ""
+what-your-customers-say: ""
