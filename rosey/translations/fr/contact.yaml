@@ -12,7 +12,6 @@ _inputs:
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/contact.yaml)"
           inputs:
-            - a-contact-block
             - an-image-card-grid
             - bite-sized-information
             - contact-us
@@ -22,6 +21,7 @@ _inputs:
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/contact.yaml)"
           inputs:
+            - a-contact-block
             - eyebrow-heading
   a-contact-block:
     label: A contact block
