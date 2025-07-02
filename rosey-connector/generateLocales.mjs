@@ -396,11 +396,6 @@ function processContentTranslationKey(
   const oldLocaleDataValue = oldLocaleData[keyName]?.value.trim();
   const baseFileDataOriginal = baseFileData[keyName]?.original.trim();
 
-  // TODO:
-  // Check here if there was a translation and now there isn't
-  // That should be an isNewTranslation (or a diff key so we can log it as untranslated now
-  // And untranslated: true - we could check in the logger for isNewTranslation but not unTranslated: true
-
   // No translated string use the original
   if (!translatedString) {
     // Check if there was a translation the round before and we've cleared it
