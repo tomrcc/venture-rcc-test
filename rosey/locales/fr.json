@@ -3,120 +3,124 @@
 		"original": "404",
 		"value": "404"
 	},
-	"a-component-to-showcase-your-brand": {
+	"A-component-to-showcase-your-brand": {
 		"original": "A component to showcase your brand",
 		"value": "A component to showcase your brand"
 	},
-	"a-contact-block": {
+	"A-contact-block": {
 		"original": "A contact block",
-		"value": "Contacto Pronto"
+		"value": "A contact block"
 	},
-	"a-featured-icons-block": {
+	"A-featured-icons-block": {
 		"original": "A featured icons block",
 		"value": "A featured icons block"
 	},
-	"a-hero-for-a-booking-form-page": {
+	"A-hero-for-a-booking-form-page": {
 		"original": "A hero for a booking form page",
 		"value": "A hero for a booking form page"
+	},
+	"A-simple-text-block-for-your-FAQs": {
+		"original": "A simple text block for your FAQs",
+		"value": "A simple text block for your FAQs"
+	},
+	"A-small-business-template": {
+		"original": "A small business template",
+		"value": "A small business template"
+	},
+	"An-icon-card-grid": {
+		"original": "An icon card grid",
+		"value": "An icon card grid"
+	},
+	"An-image-card-grid": {
+		"original": "An image card grid",
+		"value": "An image card grid"
+	},
+	"Bite-sized-information": {
+		"original": "Bite-sized information",
+		"value": "Bite-sized information"
+	},
+	"Booking-form": {
+		"original": "Booking form",
+		"value": "Booking form"
+	},
+	"Changing-this-heading": {
+		"original": "Changing this heading",
+		"value": "Changing this heading"
+	},
+	"Contact-us": {
+		"original": "Contact us",
+		"value": "Contact us"
+	},
+	"Eyebrow-Heading": {
+		"original": "Eyebrow Heading",
+		"value": "Eyebrow Heading"
+	},
+	"Heading": {
+		"original": "Heading",
+		"value": "Heading"
+	},
+	"Image-Gallery": {
+		"original": "Image Gallery",
+		"value": "Image Gallery"
+	},
+	"Large-image-or-video-block": {
+		"original": "Large image or video block",
+		"value": "Large image or video block"
+	},
+	"List-your-services-or-products": {
+		"original": "List your services or products",
+		"value": "List your services or products"
+	},
+	"Page-Not-Found": {
+		"original": "Page Not Found",
+		"value": "Page Not Found"
+	},
+	"Primary-Heading": {
+		"original": "Primary Heading",
+		"value": "Primary Heading"
+	},
+	"Tag-or-label-headline": {
+		"original": "Tag or label headline",
+		"value": "Tag or label headline"
+	},
+	"Terms-and-conditions": {
+		"original": "Terms and conditions",
+		"value": "Terms and conditions"
+	},
+	"What-your-customers-say": {
+		"original": "What your customers say",
+		"value": "What your customers say"
 	},
 	"a-simple-gallery": {
 		"original": "a simple gallery",
 		"value": "a simple gallery"
 	},
-	"a-simple-text-block-for-your-faqs": {
-		"original": "A simple text block for your FAQs",
-		"value": "A simple text block for your FAQs"
-	},
-	"a-small-business-template": {
-		"original": "A small business template",
-		"value": "A small business template"
-	},
-	"an-icon-card-grid": {
-		"original": "An icon card grid",
-		"value": "An icon card grid"
-	},
-	"an-image-card-grid": {
-		"original": "An image card grid",
-		"value": "An image card grid"
-	},
-	"and-ldquo-their-customer-service-is-second-to-none-and-rdquo": {
+	"andldquoTheir-customer-service-is-second-to-none.andrdquo": {
 		"original": "“Their customer service is second to none.”",
 		"value": "“Their customer service is second to none.”"
 	},
-	"bite-sized-information": {
-		"original": "Bite-sized information",
-		"value": "Bite-sized information"
-	},
-	"booking-form": {
-		"original": "Booking form",
-		"value": "Booking form"
-	},
-	"changing-this-heading": {
-		"original": "Changing this heading",
-		"value": "New translation"
-	},
-	"common:book-now": {
+	"common:Book-Now": {
 		"original": "Book Now",
 		"value": "Book Now"
 	},
-	"common:contact-us": {
+	"common:Contact-Us": {
 		"original": "Contact Us",
-		"value": "A propos"
+		"value": "Contact Us"
 	},
-	"common:our-services": {
+	"common:Our-Services": {
 		"original": "Our Services",
 		"value": "Our Services"
-	},
-	"contact-us": {
-		"original": "Contact us",
-		"value": "Contact us"
-	},
-	"eyebrow-heading": {
-		"original": "Eyebrow Heading",
-		"value": "TRANSLATEDDDDDDDD"
-	},
-	"heading": {
-		"original": "Heading",
-		"value": "Heading"
 	},
 	"icon-card": {
 		"original": "icon card",
 		"value": "icon card"
 	},
-	"image-gallery": {
-		"original": "Image Gallery",
-		"value": "This will get rid of TRANSLATEDDDD?"
-	},
-	"large-image-or-video-block": {
-		"original": "Large image or video block",
-		"value": "Large image or video block"
-	},
 	"let-your-features-shine": {
 		"original": "let your features shine",
 		"value": "let your features shine"
 	},
-	"list-your-services-or-products": {
-		"original": "List your services or products",
-		"value": "List your services or products"
-	},
-	"page-not-found": {
-		"original": "Page Not Found",
-		"value": "Page Not Found"
-	},
-	"primary-heading": {
-		"original": "Primary Heading",
-		"value": "Primary Heading"
-	},
 	"tag-or-label-headline": {
-		"original": "Tag or label headline",
-		"value": "Tag or label headline"
-	},
-	"terms-and-conditions": {
-		"original": "Terms and conditions",
-		"value": "Terms and conditions"
-	},
-	"what-your-customers-say": {
-		"original": "What your customers say",
-		"value": "What your customers say"
+		"original": "tag or label headline",
+		"value": "tag or label headline"
 	}
 }

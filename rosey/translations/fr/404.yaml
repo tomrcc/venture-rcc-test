@@ -20,13 +20,13 @@ _inputs:
             rosey/translations/fr/404.yaml)"
           inputs:
             - "404"
-            - page-not-found
+            - Page-Not-Found
         - heading: Already translated (fr)
           comment: "[404/](https://frank-hare.cloudvent.net/404/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/404.yaml)"
           inputs: []
-  page-not-found:
+  Page-Not-Found:
     label: Page Not Found
     hidden: false
     type: text
@@ -35,4 +35,4 @@ _inputs:
       context](https://frank-hare.cloudvent.net/404/#:~:text=Page%20Not%20Found\
       )"
 urlTranslation: 404/index.html
-page-not-found: ""
+Page-Not-Found: ""

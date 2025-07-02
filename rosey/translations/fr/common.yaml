@@ -8,27 +8,27 @@ _inputs:
         - heading: Still to translate (fr)
           comment: Text to translate
           inputs:
-            - common:book-now
-            - common:our-services
+            - common:Book-Now
+            - common:Contact-Us
+            - common:Our-Services
         - heading: Already translated (fr)
           comment: Text already translated
-          inputs:
-            - common:contact-us
-  common:book-now:
+          inputs: []
+  common:Book-Now:
     label: Book Now
     hidden: false
     type: text
     options: {}
-  common:contact-us:
+  common:Contact-Us:
     label: Contact Us
     hidden: false
     type: text
     options: {}
-  common:our-services:
+  common:Our-Services:
     label: Our Services
     hidden: false
     type: text
     options: {}
-common:book-now: ""
-common:contact-us: A propos
-common:our-services: ""
+common:Book-Now: ""
+common:Contact-Us: ""
+common:Our-Services: ""

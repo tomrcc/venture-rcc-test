@@ -12,22 +12,22 @@ _inputs:
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/booking.yaml)"
           inputs:
-            - a-hero-for-a-booking-form-page
-            - a-simple-text-block-for-your-faqs
-            - an-icon-card-grid
-            - bite-sized-information
-            - booking-form
-            - heading
+            - A-hero-for-a-booking-form-page
+            - A-simple-text-block-for-your-FAQs
+            - An-icon-card-grid
+            - Bite-sized-information
+            - Booking-form
+            - Eyebrow-Heading
+            - Heading
+            - Large-image-or-video-block
+            - Tag-or-label-headline
             - icon-card
-            - large-image-or-video-block
-            - tag-or-label-headline
         - heading: Already translated (fr)
           comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/booking.yaml)"
-          inputs:
-            - eyebrow-heading
-  a-hero-for-a-booking-form-page:
+          inputs: []
+  A-hero-for-a-booking-form-page:
     label: A hero for a booking form page
     hidden: false
     type: textarea
@@ -35,7 +35,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=A%20hero%20for\
       ,booking%20form%20page)"
-  a-simple-text-block-for-your-faqs:
+  A-simple-text-block-for-your-FAQs:
     label: A simple text block for your FAQs
     hidden: false
     type: textarea
@@ -43,7 +43,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=A%20simple%20t\
       ext,for%20your%20FAQs)"
-  an-icon-card-grid:
+  An-icon-card-grid:
     label: An icon card grid
     hidden: false
     type: text
@@ -51,7 +51,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=An%20icon%20ca\
       rd%20grid)"
-  bite-sized-information:
+  Bite-sized-information:
     label: Bite-sized information
     hidden: false
     type: textarea
@@ -59,7 +59,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Bite-sized%20i\
       nformation)"
-  booking-form:
+  Booking-form:
     label: Booking form
     hidden: false
     type: text
@@ -67,7 +67,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Booking%20form\
       )"
-  eyebrow-heading:
+  Eyebrow-Heading:
     label: Eyebrow Heading
     hidden: false
     type: text
@@ -75,21 +75,14 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Eyebrow%20Head\
       ing)"
-  heading:
+  Heading:
     label: Heading
     hidden: false
     type: text
     options: {}
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Heading)"
-  icon-card:
-    label: icon card
-    hidden: false
-    type: text
-    options: {}
-    comment: "[See in
-      context](https://frank-hare.cloudvent.net/booking/#:~:text=icon%20card)"
-  large-image-or-video-block:
+  Large-image-or-video-block:
     label: Large image or video block
     hidden: false
     type: textarea
@@ -97,7 +90,7 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Large%20image%\
       20or%20video%20block)"
-  tag-or-label-headline:
+  Tag-or-label-headline:
     label: Tag or label headline
     hidden: false
     type: textarea
@@ -105,14 +98,21 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Tag%20or%20lab\
       el%20headline)"
+  icon-card:
+    label: icon card
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=icon%20card)"
 urlTranslation: booking/index.html
-a-hero-for-a-booking-form-page: ""
-a-simple-text-block-for-your-faqs: ""
-an-icon-card-grid: ""
-bite-sized-information: ""
-booking-form: ""
-eyebrow-heading: TRANSLATEDDDDDDDD
-heading: ""
+A-hero-for-a-booking-form-page: ""
+A-simple-text-block-for-your-FAQs: ""
+An-icon-card-grid: ""
+Bite-sized-information: ""
+Booking-form: ""
+Eyebrow-Heading: ""
+Heading: ""
+Large-image-or-video-block: ""
+Tag-or-label-headline: ""
 icon-card: ""
-large-image-or-video-block: ""
-tag-or-label-headline: ""
