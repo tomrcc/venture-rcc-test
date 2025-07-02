@@ -7,11 +7,27 @@ import path from "path";
 
 import rehypeParse from "rehype-parse";
 import rehypeStringify from "rehype-stringify";
+import rehypeFormat from "rehype-format";
+import slugify from "slugify";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 
+// Find all of the .html pages in the build output
+// Parse the page looking for elements with the property of dataRoseyTagger
+// Walk the contents of the element we find the tag on
+// Keep walking its children until we find the most nested block elements
+// Get all of their inner text for each of these elements
+// Format the text, stripping it of inline html elements
+// Add a data-rosey id with the formatted text
+// If the innerText comes back as empty (like in a placeholder span that is for a style) don't add the tag at all
+// Keep walking until we've looked through the whole page
+// Keep walking until we've walked all of the .html pages
+// Sanitise the html
+// Parse the AST back into html and write it back to where we found it
+
 const tagNameToLookFor = "dataRoseyTagger"; // Prop names are camelCased
-const testPagePath = "rosey-tagger/test-files/index-basic.html";
+const testPagePath = "rosey-tagger/test-files/index-reduced.html";
+const testPageToWritePath = "rosey-tagger/index.html";
 
 const blockLevelElements = [
   "div",
@@ -30,11 +46,16 @@ const blockLevelElements = [
 // Main function
 (async () => {
   const htmlToParse = await fs.promises.readFile(testPagePath, "utf8");
+  console.log(`Parsing file: ${testPagePath}`);
   const file = await unified()
     .use(rehypeParse)
     .use(tagHtmlWithDataTags)
     .use(rehypeStringify)
+    .use(rehypeFormat)
     .process(htmlToParse);
+
+  // Write tagged file
+  await fs.promises.writeFile(testPageToWritePath, file.value);
 })();
 
 function tagHtmlWithDataTags() {
@@ -46,11 +67,9 @@ function tagHtmlWithDataTags() {
       // Check for the tag name we're looking for on any html element
       if (Object.keys(node.properties).includes(tagNameToLookFor)) {
         console.log(
-          `Found the tag we're looking for on the element ${node.tagName} at ${node.position}`
+          `Found the tag we're looking for on the element ${node.tagName} on line ${node.position.start.line}`
         );
         // Walk the contents of the element we find the tag on
-        // Keep walking until we find the most nested block elements
-        // Keep walking until we find all the most nested elements inside, not just the first most nested one
         walkChildren(node);
       }
     });
@@ -58,21 +77,24 @@ function tagHtmlWithDataTags() {
 }
 
 function walkChildren(node) {
-  const nodesChildren = node.children;
-
-  for (const child of nodesChildren) {
+  for (const child of node.children) {
     if (!nodeIsWhiteSpace(child) && child.children) {
+      // Keep walking until we find the most nested block elements
       if (hasNestedBlockElements(child.children)) {
         walkChildren(child);
       } else {
-        console.log("Found a real one yo");
-        // console.log({ child });
-        // console.log(child.children);
+        // Found the lowest block level element
+        const innerText = extractTextChildren(child.children);
+        // Add a data-rosey tag to it with slugified inner text
+        if (innerText) {
+          child.properties["data-rosey"] = slugify(innerText);
+        }
       }
     }
   }
 }
 
+// Some nodes are just whitespace
 function nodeIsWhiteSpace(node) {
   if (node.type === "text" && node.value.replaceAll("\n", "").trim() === "") {
     return true;
@@ -80,21 +102,45 @@ function nodeIsWhiteSpace(node) {
   return false;
 }
 
-function hasNestedBlockElements(children) {
+function hasNestedBlockElements(node) {
   let itDoes = false;
-  for (const node of children) {
-    if (node.type === "element" && blockLevelElements.includes(node.tagName)) {
+  for (const child of node) {
+    if (
+      child.type === "element" &&
+      blockLevelElements.includes(child.tagName)
+    ) {
       itDoes = true;
     }
   }
   return itDoes;
 }
 
-// TODO:
-// Get all of their inner text for each of these elements
-// Format the text, stripping it of inline html elements
-// Add a data-rosey id with the formatted text
-// Exit out of the element and look through the rest of the page
-// Exit out of the page and walk the rest of the pages
-// Sanitise the html
-// Parse the AST back into html and write it back to where we found it
+// Extract the text from inside the most nested block level elements
+function extractTextChildren(node) {
+  let innerText = "";
+  for (const child of node) {
+    // If the child is text, and doesn't have its own inline element children add to the inner text
+    if (child.value) {
+      const innerTextFormatted = child.value.replaceAll("\n", "");
+      innerText += innerTextFormatted;
+      // Otherwise use a recursive function to walk through the inline elements, which are also children
+    } else {
+      innerText += getInnerTextFromInlineElements(child);
+    }
+  }
+  return innerText;
+}
+
+// A recursive function to get the inner text, which is kept track of in the calling function (extractTextChildren)
+function getInnerTextFromInlineElements(node) {
+  let innerText = "";
+  for (const child of node.children) {
+    if (child.value) {
+      const innerTextFormatted = child.value;
+      innerText += innerTextFormatted;
+    } else {
+      innerText += getInnerTextFromInlineElements(child);
+    }
+  }
+  return innerText;
+}
