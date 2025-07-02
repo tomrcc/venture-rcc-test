@@ -8,11 +8,11 @@ _inputs:
         - heading: Still to translate (fr)
           comment: Text to translate
           inputs:
+            - common:book-now
             - common:our-services
         - heading: Already translated (fr)
           comment: Text already translated
           inputs:
-            - common:book-now
             - common:contact-us
   common:book-now:
     label: Book Now
@@ -29,6 +29,6 @@ _inputs:
     hidden: false
     type: text
     options: {}
-common:book-now:
+common:book-now: ""
 common:contact-us: A propos
-common:our-services: ''
+common:our-services: ""
