@@ -14,14 +14,14 @@ _inputs:
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/terms-and-conditions.yaml)"
           inputs:
-            - eyebrow-heading
             - terms-and-conditions
         - heading: Already translated (fr)
           comment: "[terms-and-conditions/](https://frank-hare.cloudvent.net/terms-and-co\
             nditions/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/terms-and-conditions.yaml)"
-          inputs: []
+          inputs:
+            - eyebrow-heading
   eyebrow-heading:
     label: Eyebrow Heading
     hidden: false

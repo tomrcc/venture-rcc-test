@@ -17,7 +17,6 @@ _inputs:
             - an-icon-card-grid
             - bite-sized-information
             - booking-form
-            - eyebrow-heading
             - heading
             - icon-card
             - large-image-or-video-block
@@ -26,7 +25,8 @@ _inputs:
           comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/booking.yaml)"
-          inputs: []
+          inputs:
+            - eyebrow-heading
   a-hero-for-a-booking-form-page:
     label: A hero for a booking form page
     hidden: false

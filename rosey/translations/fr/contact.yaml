@@ -16,13 +16,13 @@ _inputs:
             - an-image-card-grid
             - bite-sized-information
             - contact-us
-            - eyebrow-heading
             - primary-heading
         - heading: Already translated (fr)
           comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/contact.yaml)"
-          inputs: []
+          inputs:
+            - eyebrow-heading
   a-contact-block:
     label: A contact block
     hidden: false

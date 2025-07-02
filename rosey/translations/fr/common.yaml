@@ -8,12 +8,12 @@ _inputs:
         - heading: Still to translate (fr)
           comment: Text to translate
           inputs:
-            - common:book-now
-            - common:contact-us
             - common:our-services
         - heading: Already translated (fr)
           comment: Text already translated
-          inputs: []
+          inputs:
+            - common:book-now
+            - common:contact-us
   common:book-now:
     label: Book Now
     hidden: false
@@ -31,4 +31,4 @@ _inputs:
     options: {}
 common:book-now: Francais
 common:contact-us: A propos
-common:our-services: ''
+common:our-services: ""
