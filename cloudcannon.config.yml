@@ -4,6 +4,7 @@ paths:
 collections_config:
   pages:
     path: src/pages
+    url: "[full_slug]"
     glob:
       - "!components.html"
       - "!404.html"
