@@ -1,10 +1,9 @@
-source: src
 paths:
   static: ""
-  uploads: assets/uploads
+  uploads: src/assets/uploads
 collections_config:
   pages:
-    path: pages
+    path: src/pages
     glob:
       - "!components.html"
       - "!404.html"
@@ -13,7 +12,7 @@ collections_config:
       default:
         path: .cloudcannon/schemas/page.html
   data:
-    path: _data
+    path: src/_data
     glob:
       - "!color_groups.yml"
     icon: data_usage
@@ -36,7 +35,7 @@ collections_config:
         type: text
         comment: Provide a translation for the Url that Rosey will build this page at.
 file_config:
-  - glob: _data/site.yml
+  - glob: src/_data/site.yml
     _inputs:
       social_media_links:
         type: array
@@ -58,11 +57,11 @@ file_config:
                         - image/svg+xml
 data_config:
   fonts:
-    path: _data/fonts.yml
+    path: src/_data/fonts.yml
   color_groups:
-    path: _data/color_groups.yml
+    path: src/_data/color_groups.yml
   site:
-    path: _data/site.yml
+    path: src/_data/site.yml
 _inputs:
   favicon:
     type: image
