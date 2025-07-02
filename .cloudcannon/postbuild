@@ -1,1 +1,9 @@
+#!/usr/bin/env bash
 npx @bookshop/generate
+
+npx rosey generate --source _site
+node rosey-connector/main.mjs
+
+echo "Translating site with Rosey"
+mv ./_site ./untranslated_site                  
+npx rosey build --source untranslated_site --dest _site --default-language-at-root

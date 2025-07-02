@@ -21,6 +21,20 @@ collections_config:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
+  translations:
+    path: rosey
+    icon: translate
+    disable_url: true
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: false
+    glob:
+      - config.yaml
+      - 'translations/**'
+    _inputs:
+      urlTranslation:
+        type: text
+        comment: Provide a translation for the Url that Rosey will build this page at.
 file_config:
   - glob: _data/site.yml
     _inputs:
