@@ -1,5 +1,5 @@
 {% assign_local c = "c-navigation" %}
-<header class="c-header">
+<header class="c-header" data-rosey-ns="common">
     <nav class="{{c}} {{c}}--close {{c}}--{{nav.nav_color_group}}" aria-label="Main menu" id="main-menu">
         <div class="{{c}}__skip-to-content-link" >
             {% bookshop "generic/button"
@@ -30,11 +30,11 @@
                             {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
                             {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
                                 <li class="{{ c }}__navlist__item {{ c }}__navlist__item--active" aria-current="page">
-                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}" data-rosey="{{ navitem.label | slugify }}">{{ navitem.label }}</a>
                                 </li>
                             {% else %}
                                 <li class="{{ c }}__navlist__item">
-                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}" data-rosey="{{ navitem.label | slugify }}">{{ navitem.label }}</a>
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -49,11 +49,11 @@
                             {% assign nav_item_with_slash = navitem.link_url | append: "/" %}
                             {% if page.url == navitem.link_url or page.url == nav_item_with_slash %}
                                 <li class="{{ c }}__navlist__item {{ c }}__navlist__item--active" aria-current="page">
-                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}" data-rosey="{{ navitem.label | slugify }}">{{ navitem.label }}</a>
                                 </li>
                             {% else %}
                                 <li class="{{ c }}__navlist__item">
-                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}">{{ navitem.label }}</a>
+                                    <a class="{{ c }}__navlist__item__link" href="{{ navitem.link_url }}" data-rosey="{{ navitem.label | slugify }}">{{ navitem.label }}</a>
                                 </li>
                             {% endif %}
                         {% endfor %}
