@@ -29,6 +29,6 @@ _inputs:
     hidden: false
     type: text
     options: {}
-common:book-now: ""
-common:contact-us: ""
-common:our-services: ""
+common:book-now: Francais
+common:contact-us: A propos
+common:our-services: ''
