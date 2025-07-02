@@ -4,11 +4,11 @@
 
 import fs from "fs";
 import path from "path";
+import slugify from "slugify";
 
 import rehypeParse from "rehype-parse";
 import rehypeStringify from "rehype-stringify";
 import rehypeFormat from "rehype-format";
-import slugify from "slugify";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 
