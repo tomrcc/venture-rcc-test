@@ -1,4 +1,11 @@
+"404": ""
 _inputs:
+  "404":
+    label: "404"
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in context](https://frank-hare.cloudvent.net/404/#:~:text=404)"
   $:
     type: object
     comment: "[404/](https://frank-hare.cloudvent.net/404/)  //  [Git
@@ -11,10 +18,21 @@ _inputs:
           comment: "[404/](https://frank-hare.cloudvent.net/404/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/404.yaml)"
-          inputs: []
+          inputs:
+            - "404"
+            - page-not-found
         - heading: Already translated (fr)
           comment: "[404/](https://frank-hare.cloudvent.net/404/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/404.yaml)"
           inputs: []
+  page-not-found:
+    label: Page Not Found
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/404/#:~:text=Page%20Not%20Found\
+      )"
 urlTranslation: 404/index.html
+page-not-found: ""

@@ -1,4 +1,263 @@
 {
   "version": 2,
-  "keys": {}
+  "keys": {
+    "404": {
+      "original": "\n      404\n    ",
+      "value": null,
+      "pages": {
+        "404/index.html": 1
+      },
+      "total": 1
+    },
+    "a-component-to-showcase-your-brand": {
+      "original": "\n      A component to showcase your brand\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "a-contact-block": {
+      "original": "\n      A contact block\n    ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1,
+        "index.html": 1
+      },
+      "total": 2
+    },
+    "a-featured-icons-block": {
+      "original": "\n      A featured icons block\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "a-hero-for-a-booking-form-page": {
+      "original": "\n      A hero for a booking form page\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1
+      },
+      "total": 1
+    },
+    "a-simple-gallery": {
+      "original": "\n      a simple gallery\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "a-simple-text-block-for-your-faqs": {
+      "original": "\n      A simple text block for your FAQs\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1
+      },
+      "total": 1
+    },
+    "a-small-business-template": {
+      "original": "\n      A small business template\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "an-icon-card-grid": {
+      "original": "\n      An icon card grid\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1
+      },
+      "total": 1
+    },
+    "an-image-card-grid": {
+      "original": "\n      An image card grid\n    ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 1
+      },
+      "total": 1
+    },
+    "and-ldquo-their-customer-service-is-second-to-none-and-rdquo": {
+      "original": "\n      “Their customer service is second to none.”\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "bite-sized-information": {
+      "original": "\n      Bite-sized information\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1,
+        "contact/index.html": 1
+      },
+      "total": 2
+    },
+    "booking-form": {
+      "original": "\n      Booking form\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1
+      },
+      "total": 1
+    },
+    "common:book-now": {
+      "original": "Book Now",
+      "value": null,
+      "pages": {
+        "404/index.html": 2,
+        "booking/index.html": 2,
+        "contact/index.html": 2,
+        "index.html": 2,
+        "terms-and-conditions/index.html": 2
+      },
+      "total": 10
+    },
+    "common:contact-us": {
+      "original": "Contact Us",
+      "value": null,
+      "pages": {
+        "404/index.html": 2,
+        "booking/index.html": 2,
+        "contact/index.html": 2,
+        "index.html": 2,
+        "terms-and-conditions/index.html": 2
+      },
+      "total": 10
+    },
+    "common:our-services": {
+      "original": "Our Services",
+      "value": null,
+      "pages": {
+        "404/index.html": 2,
+        "booking/index.html": 2,
+        "contact/index.html": 2,
+        "index.html": 2,
+        "terms-and-conditions/index.html": 2
+      },
+      "total": 10
+    },
+    "contact-us": {
+      "original": "\n      Contact us\n    ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 2
+      },
+      "total": 2
+    },
+    "empower-your-business-with-this-brilliant-template": {
+      "original": "\n      Empower your business with this brilliant template\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "eyebrow-heading": {
+      "original": "\n      Eyebrow Heading\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 3,
+        "contact/index.html": 5,
+        "index.html": 1,
+        "terms-and-conditions/index.html": 1
+      },
+      "total": 10
+    },
+    "heading": {
+      "original": "\n      Heading\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 3
+      },
+      "total": 3
+    },
+    "icon-card": {
+      "original": "\n      icon card\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 3
+      },
+      "total": 3
+    },
+    "image-gallery": {
+      "original": "\n      Image Gallery\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "large-image-or-video-block": {
+      "original": "\n      Large image or video block\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1
+      },
+      "total": 1
+    },
+    "let-your-features-shine": {
+      "original": "\n      let your features shine\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "list-your-services-or-products": {
+      "original": "\n      List your services or products\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    },
+    "page-not-found": {
+      "original": "\n      Page Not Found\n    ",
+      "value": null,
+      "pages": {
+        "404/index.html": 1
+      },
+      "total": 1
+    },
+    "primary-heading": {
+      "original": "\n      Primary Heading\n    ",
+      "value": null,
+      "pages": {
+        "contact/index.html": 3
+      },
+      "total": 3
+    },
+    "tag-or-label-headline": {
+      "original": "\n      Tag or label headline\n    ",
+      "value": null,
+      "pages": {
+        "booking/index.html": 1,
+        "index.html": 1
+      },
+      "total": 2
+    },
+    "terms-and-conditions": {
+      "original": "\n      Terms and conditions\n    ",
+      "value": null,
+      "pages": {
+        "terms-and-conditions/index.html": 1
+      },
+      "total": 1
+    },
+    "what-your-customers-say": {
+      "original": "\n      What your customers say\n    ",
+      "value": null,
+      "pages": {
+        "index.html": 1
+      },
+      "total": 1
+    }
+  }
 }

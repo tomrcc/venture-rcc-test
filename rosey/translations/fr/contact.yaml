@@ -11,10 +11,69 @@ _inputs:
           comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/contact.yaml)"
-          inputs: []
+          inputs:
+            - a-contact-block
+            - an-image-card-grid
+            - bite-sized-information
+            - contact-us
+            - eyebrow-heading
+            - primary-heading
         - heading: Already translated (fr)
           comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
             rosey/translations/fr/contact.yaml)"
           inputs: []
+  a-contact-block:
+    label: A contact block
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=A%20contact%20\
+      block)"
+  an-image-card-grid:
+    label: An image card grid
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=An%20image%20c\
+      ard%20grid)"
+  bite-sized-information:
+    label: Bite-sized information
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=Bite-sized%20i\
+      nformation)"
+  contact-us:
+    label: Contact us
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=Contact%20us)"
+  eyebrow-heading:
+    label: Eyebrow Heading
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=Eyebrow%20Head\
+      ing)"
+  primary-heading:
+    label: Primary Heading
+    hidden: false
+    type: text
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/contact/#:~:text=Primary%20Head\
+      ing)"
 urlTranslation: contact/index.html
+a-contact-block: ""
+an-image-card-grid: ""
+bite-sized-information: ""
+contact-us: ""
+eyebrow-heading: ""
+primary-heading: ""
