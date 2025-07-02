@@ -1,0 +1,20 @@
+_inputs:
+  $:
+    type: object
+    comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
+      history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/\
+      translations/fr/booking.yaml)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Still to translate (fr)
+          comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/booking.yaml)"
+          inputs: []
+        - heading: Already translated (fr)
+          comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/booking.yaml)"
+          inputs: []
+urlTranslation: booking/index.html

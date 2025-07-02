@@ -1,0 +1,20 @@
+_inputs:
+  $:
+    type: object
+    comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
+      history](https://github.com/tomrcc/venture-rcc-test/commits/main/./rosey/\
+      translations/fr/contact.yaml)"
+    options:
+      place_groups_below: false
+      groups:
+        - heading: Still to translate (fr)
+          comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/contact.yaml)"
+          inputs: []
+        - heading: Already translated (fr)
+          comment: "[contact/](https://frank-hare.cloudvent.net/contact/)  //  [Git
+            history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
+            rosey/translations/fr/contact.yaml)"
+          inputs: []
+urlTranslation: contact/index.html
