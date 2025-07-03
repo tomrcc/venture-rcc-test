@@ -14,13 +14,10 @@ import { visit } from "unist-util-visit";
 
 import { isDirectory } from "../rosey-connector/helpers/file-helpers.mjs";
 
-// TODO: Find all of the .html pages in the build output
-//// Scan the output build dir
-//// Walk directories looking for .html files
-//// Each time we find one run the main function over it
-//// Write it to the place we found it
-
-// Parse the page looking for elements with the property of dataRoseyTagger
+// Find all of the .html pages in the build output
+// Scan the output build dir
+// Walk directories looking for .html files
+// Parse the .html file looking for elements with the property of dataRoseyTagger
 // Walk the contents of the element we find the tag on
 // Keep walking its children until we find the most nested block elements
 // Get all of their inner text for each of these elements
@@ -86,7 +83,7 @@ async function walkDirs(dirToTagPath) {
   const dirToTagFiles = await fs.promises.readdir(dirToTagPath);
   for (const fileName of dirToTagFiles) {
     const filePath = path.join(dirToTagPath, fileName);
-    // TODO: If its an html file run the readTagAndWriteHtmlFile fn on it
+    // If its an html file look for places to add data-rosey tags
     if (filePath.endsWith(".html")) {
       await readTagAndWriteHtmlFile(filePath);
     }
