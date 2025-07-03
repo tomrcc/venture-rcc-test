@@ -34,6 +34,10 @@ import { visit } from "unist-util-visit";
 const tagNameToLookFor = "dataRoseyTagger"; // Prop names are camelCased
 const testPagePath = "rosey-tagger/test-files/index-reduced.html";
 const testPageToWritePath = "rosey-tagger/index.html";
+const logStatistics = {
+  tagsAdded: {},
+  inlineElementsFound: {},
+};
 
 const blockLevelElements = [
   "div",
@@ -51,8 +55,11 @@ const blockLevelElements = [
 
 // Main function
 (async () => {
+  console.log("🔎 Beginning tagging of html files...");
+
+  console.log(`Adding tags to ${testPagePath}\n`);
   const htmlToParse = await fs.promises.readFile(testPagePath, "utf8");
-  console.log(`Parsing file: ${testPagePath}`);
+
   const file = await unified()
     .use(rehypeParse)
     .use(tagHtmlWithDataTags)
@@ -62,6 +69,22 @@ const blockLevelElements = [
 
   // Write tagged file
   await fs.promises.writeFile(testPageToWritePath, file.value);
+  console.log(`\n🖍️  Added tags and wrote file: ${testPagePath}`);
+
+  // Log out the stats from the tagging
+  console.log(`\n---Tagging Statistics---`);
+
+  console.log("\nBlock level elements:");
+  for (const blockElement of Object.keys(logStatistics.tagsAdded)) {
+    console.log(`- ${blockElement}: ${logStatistics.tagsAdded[blockElement]}`);
+  }
+
+  console.log("\nFound and extracted text from inline elements:");
+  for (const inlineElement of Object.keys(logStatistics.inlineElementsFound)) {
+    console.log(
+      `- ${inlineElement}: ${logStatistics.inlineElementsFound[inlineElement]}`
+    );
+  }
 })();
 
 function tagHtmlWithDataTags() {
@@ -73,7 +96,7 @@ function tagHtmlWithDataTags() {
       // Check for the tag name we're looking for on any html element
       if (Object.keys(node.properties).includes(tagNameToLookFor)) {
         console.log(
-          `Found the tag we're looking for on the element ${node.tagName} on line ${node.position.start.line}`
+          `Found the tag we're looking for on the \<${node.tagName}> element on line ${node.position.start.line}, walking contents now...`
         );
         // Walk the contents of the element we find the tag on
         walkChildren(node);
@@ -96,6 +119,11 @@ function walkChildren(node) {
         // Add a data-rosey tag to it with slugified inner text
         if (innerText) {
           child.properties["data-rosey"] = slugify(innerText);
+          if (logStatistics.tagsAdded[child.tagName]) {
+            logStatistics.tagsAdded[child.tagName] += 1;
+          } else {
+            logStatistics.tagsAdded[child.tagName] = 1;
+          }
         }
       }
     }
@@ -146,6 +174,11 @@ function getInnerTextFromInlineElements(node) {
     if (child.value) {
       const innerTextFormatted = child.value;
       innerText += innerTextFormatted;
+      if (logStatistics.inlineElementsFound[node.tagName]) {
+        logStatistics.inlineElementsFound[node.tagName] += 1;
+      } else {
+        logStatistics.inlineElementsFound[node.tagName] = 1;
+      }
     } else {
       innerText += getInnerTextFromInlineElements(child);
     }
