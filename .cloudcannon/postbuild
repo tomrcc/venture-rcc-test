@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 npx @bookshop/generate
 
+node rosey-tagger/main.mjs --source _site
 npx rosey generate --source _site
 node rosey-connector/main.mjs
 

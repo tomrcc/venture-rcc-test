@@ -15,7 +15,8 @@
     "sass:build": "sass --no-source-map src/assets/styles:css",
     "prebuild": "del-cli \"_site/*\" \"!_site/optimized\"",
     "build": "npm-run-all fetch-theme-variables sass:build bookshop-sass:build eleventy:build",
-    "start": "npm-run-all fetch-theme-variables sass:build bookshop-sass:build --parallel bookshop-sass:watch sass:watch bookshop:browser eleventy:watch"
+    "start": "npm-run-all fetch-theme-variables sass:build bookshop-sass:build --parallel bookshop-sass:watch sass:watch bookshop:browser eleventy:watch",
+    "simulate-cc-build": "rm -r _site || true && rm -r untranslated_site || true && npm run build && mkdir _site/_cloudcannon && echo '{}' >> _site/_cloudcannon/info.json && ./.cloudcannon/postbuild"
   },
   "repository": {
     "type": "git",
