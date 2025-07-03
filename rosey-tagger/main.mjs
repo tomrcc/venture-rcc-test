@@ -12,6 +12,8 @@ import rehypeFormat from "rehype-format";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 
+import { isDirectory } from "../rosey-connector/helpers/file-helpers.mjs";
+
 // TODO: Find all of the .html pages in the build output
 //// Scan the output build dir
 //// Walk directories looking for .html files
@@ -31,8 +33,8 @@ import { visit } from "unist-util-visit";
 // Parse the AST back into html and write it back to where we found it
 
 const tagNameToLookFor = "dataRoseyTagger"; // Prop names are camelCased
-const testPagePath = "rosey-tagger/test-files/index-basic.html";
-const testPageToWritePath = "rosey-tagger/index.html";
+const dirPath = "_site";
+
 const logStatistics = {
   tagsAdded: {},
   inlineElementsFound: {},
@@ -75,12 +77,50 @@ const blockLevelElements = [
 (async () => {
   console.log("🔎 Beginning tagging of html files...");
 
-  console.log(`Adding tags to ${testPagePath}\n`);
-  const htmlToParse = await fs.promises.readFile(testPagePath, "utf8");
+  // Walk the build dir
+  await walkDirs(dirPath);
+})();
+
+// Walk dirs to find .html files, and if it finds a dir recursively calls itself on that dir
+async function walkDirs(dirToTagPath) {
+  const dirToTagFiles = await fs.promises.readdir(dirToTagPath);
+  for (const fileName of dirToTagFiles) {
+    const filePath = path.join(dirToTagPath, fileName);
+    // TODO: If its an html file run the readTagAndWriteHtmlFile fn on it
+    if (filePath.endsWith(".html")) {
+      await readTagAndWriteHtmlFile(filePath);
+    }
+    // If it's a dir recursively call this fn
+    const filePathIsDir = await isDirectory(filePath);
+    if (filePathIsDir) {
+      await walkDirs(filePath);
+    }
+  }
+}
+
+async function readTagAndWriteHtmlFile(filePath) {
+  console.log(`\nLooking for tags to add on ${filePath}`);
+  const htmlToParse = await fs.promises.readFile(filePath, "utf8");
+
+  // Create the obj path in logStatistics where we will add the tagName
+  if (!logStatistics[filePath]) {
+    logStatistics[filePath] = {};
+  }
+  if (!logStatistics[filePath].tagsAdded) {
+    logStatistics[filePath].tagsAdded = {};
+  }
+
+  // Create the obj path in logStatistics where we will add the inlineElement
+  if (!logStatistics[filePath]) {
+    logStatistics[filePath] = {};
+  }
+  if (!logStatistics[filePath].inlineElementsFound) {
+    logStatistics[filePath].inlineElementsFound = {};
+  }
 
   const file = await unified()
     .use(rehypeParse)
-    .use(tagHtmlWithDataTags)
+    .use(tagHtmlWithDataTags, { filePath: filePath })
     .use(rehypeStringify)
     .use(rehypeFormat)
     .process(htmlToParse);
@@ -88,35 +128,46 @@ const blockLevelElements = [
   // Log out the stats from the tagging
   console.log(`\n---Tagging Statistics---`);
 
-  console.log("\nBlock level elements:");
-  for (const blockElement of Object.keys(logStatistics.tagsAdded)) {
-    console.log(`- ${blockElement}: ${logStatistics.tagsAdded[blockElement]}`);
+  const tagsAddedForThisPage = logStatistics[filePath].tagsAdded;
+  if (Object.keys(tagsAddedForThisPage).length === 0) {
+    console.log(`\nNo tags added.`);
+  } else {
+    console.log("\nBlock level elements:");
+    for (const blockElement of Object.keys(tagsAddedForThisPage)) {
+      console.log(`- ${blockElement}: ${tagsAddedForThisPage[blockElement]}`);
+    }
   }
 
-  if ((logStatistics.inlineElementsFound = {})) {
+  const inlineElementsExtractedOnPage =
+    logStatistics[filePath].inlineElementsFound;
+
+  if (
+    inlineElementsExtractedOnPage &&
+    Object.keys(inlineElementsExtractedOnPage).length === 0
+  ) {
     console.log(
       `\nNo inline elements in any of the block level elements we tagged.`
     );
   } else {
     console.log("\nFound and extracted text from inline elements:");
-    for (const inlineElement of Object.keys(
-      logStatistics.inlineElementsFound
-    )) {
+    for (const inlineElement of Object.keys(inlineElementsExtractedOnPage)) {
       console.log(
-        `- ${inlineElement}: ${logStatistics.inlineElementsFound[inlineElement]}`
+        `- ${inlineElement}: ${inlineElementsExtractedOnPage[inlineElement]}`
       );
     }
   }
 
   // Write tagged file
-  await fs.promises.writeFile(testPageToWritePath, file.value);
-  console.log(`\n🖍️  Added tags and wrote file: ${testPagePath}`);
-})();
+  await fs.promises.writeFile(filePath, file.value);
+  console.log(`\n🖍️  Finished walking page, and wrote file: ${filePath}`);
+  console.log(`---------------------------------------------\n\n`);
+}
 
-function tagHtmlWithDataTags() {
+function tagHtmlWithDataTags({ filePath }) {
   /**
    * @param {Root} tree
    */
+
   return function (tree) {
     visit(tree, "element", function (node) {
       // Check for the tag name we're looking for on any html element
@@ -125,28 +176,33 @@ function tagHtmlWithDataTags() {
           `Found the tag we're looking for on the \<${node.tagName}> element on line ${node.position.start.line}, walking contents now...`
         );
         // Walk the contents of the element we find the tag on
-        walkChildren(node);
+        walkChildren(node, filePath);
       }
     });
   };
 }
 
-function walkChildren(node) {
+function walkChildren(node, filePath) {
   for (const child of node.children) {
     if (!nodeIsWhiteSpace(child) && child.children) {
       // Keep walking until we find the most nested block elements
       if (hasNestedBlockElements(child.children)) {
-        walkChildren(child);
+        walkChildren(child, filePath);
       } else {
         // Found the lowest block level element
-        const innerText = extractTextChildren(child.children);
-        // Add a data-rosey tag to it with slugified inner text
-        if (innerText) {
+        const innerText = extractTextChildren(child.children, filePath);
+        // Add a data-rosey tag to it with slugified inner text if no data-rosey tag already there
+        if (innerText && !Object.keys(child.properties).includes("dataRosey")) {
           child.properties["data-rosey"] = slugify(innerText);
-          if (logStatistics.tagsAdded[child.tagName]) {
-            logStatistics.tagsAdded[child.tagName] += 1;
+          // If there is already a running total for the tagName in the logStatistics obj for this page increment by 1
+          if (
+            logStatistics[filePath]?.tagsAdded &&
+            logStatistics[filePath]?.tagsAdded[child.tagName]
+          ) {
+            logStatistics[filePath].tagsAdded[child.tagName] += 1;
+            // If there isnt already a running total for the tagName in the logStatistics obj for this page start at 1
           } else {
-            logStatistics.tagsAdded[child.tagName] = 1;
+            logStatistics[filePath].tagsAdded[child.tagName] = 1;
           }
         }
       }
@@ -176,7 +232,7 @@ function hasNestedBlockElements(node) {
 }
 
 // Extract the text from inside the most nested block level elements
-function extractTextChildren(node) {
+function extractTextChildren(node, filePath) {
   let innerText = "";
   for (const child of node) {
     // If the child is text, and doesn't have its own inline element children add to the inner text
@@ -185,26 +241,31 @@ function extractTextChildren(node) {
       innerText += innerTextFormatted;
       // Otherwise use a recursive function to walk through the inline elements, which are also children
     } else {
-      innerText += getInnerTextFromInlineElements(child);
+      innerText += getInnerTextFromInlineElements(child, filePath);
     }
   }
   return innerText;
 }
 
 // A recursive function to get the inner text, which is kept track of in the calling function (extractTextChildren)
-function getInnerTextFromInlineElements(node) {
+function getInnerTextFromInlineElements(node, filePath) {
   let innerText = "";
   for (const child of node.children) {
     if (child.value) {
       const innerTextFormatted = child.value;
       innerText += innerTextFormatted;
-      if (logStatistics.inlineElementsFound[node.tagName]) {
-        logStatistics.inlineElementsFound[node.tagName] += 1;
+      // If there is already a running total for the inlineElements in the logStatistics obj for this page increment by 1
+      if (
+        logStatistics[filePath]?.inlineElementsFound &&
+        logStatistics[filePath].inlineElementsFound[node.tagName]
+      ) {
+        logStatistics[filePath].inlineElementsFound[node.tagName] += 1;
       } else {
-        logStatistics.inlineElementsFound[node.tagName] = 1;
+        // If there isnt already a running total for the inlineElements in the logStatistics obj for this page start at 1
+        logStatistics[filePath].inlineElementsFound[node.tagName] = 1;
       }
     } else {
-      innerText += getInnerTextFromInlineElements(child);
+      innerText += getInnerTextFromInlineElements(child, filePath);
     }
   }
   return innerText;
