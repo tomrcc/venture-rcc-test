@@ -85,10 +85,6 @@ const blockLevelElements = [
     .use(rehypeFormat)
     .process(htmlToParse);
 
-  // Write tagged file
-  await fs.promises.writeFile(testPageToWritePath, file.value);
-  console.log(`\n🖍️  Added tags and wrote file: ${testPagePath}`);
-
   // Log out the stats from the tagging
   console.log(`\n---Tagging Statistics---`);
 
@@ -97,12 +93,24 @@ const blockLevelElements = [
     console.log(`- ${blockElement}: ${logStatistics.tagsAdded[blockElement]}`);
   }
 
-  console.log("\nFound and extracted text from inline elements:");
-  for (const inlineElement of Object.keys(logStatistics.inlineElementsFound)) {
+  if ((logStatistics.inlineElementsFound = {})) {
     console.log(
-      `- ${inlineElement}: ${logStatistics.inlineElementsFound[inlineElement]}`
+      `\nNo inline elements in any of the block level elements we tagged.`
     );
+  } else {
+    console.log("\nFound and extracted text from inline elements:");
+    for (const inlineElement of Object.keys(
+      logStatistics.inlineElementsFound
+    )) {
+      console.log(
+        `- ${inlineElement}: ${logStatistics.inlineElementsFound[inlineElement]}`
+      );
+    }
   }
+
+  // Write tagged file
+  await fs.promises.writeFile(testPageToWritePath, file.value);
+  console.log(`\n🖍️  Added tags and wrote file: ${testPagePath}`);
 })();
 
 function tagHtmlWithDataTags() {
