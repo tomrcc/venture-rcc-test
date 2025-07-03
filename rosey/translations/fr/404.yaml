@@ -21,6 +21,7 @@ _inputs:
           inputs:
             - "404"
             - Page-Not-Found
+            - Sorry-but-the-page-you-were-trying-to-view-does-not-exist
         - heading: Already translated (fr)
           comment: "[404/](https://frank-hare.cloudvent.net/404/)  //  [Git
             history](https://github.com/tomrcc/venture-rcc-test/commits/main/./\
@@ -34,5 +35,20 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/404/#:~:text=Page%20Not%20Found\
       )"
+  Sorry-but-the-page-you-were-trying-to-view-does-not-exist:
+    label: Sorry, but the page you were trying to vie...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/404/#:~:text=Sorry,does%20not%2\
+      0exist)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: |
+        Sorry, but the page you were trying to view does not exist.
 urlTranslation: 404/index.html
 Page-Not-Found: ""
+Sorry-but-the-page-you-were-trying-to-view-does-not-exist: ""

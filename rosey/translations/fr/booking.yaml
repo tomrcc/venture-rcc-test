@@ -17,10 +17,18 @@ _inputs:
             - An-icon-card-grid
             - Bite-sized-information
             - Booking-form
+            - Customers-want-to-know-all-the-information-before-making-a-final-decision-Make-sure-you-provide-it-to-them
             - Eyebrow-Heading
+            - Have-a-strong-visual-element-you-want-to-share?-This-component-gives-you-the-flexibility-to-either-add-a-YouTube-video-or-an-image
             - Heading
+            - Here-are-a-few-options-to-use-above-the-fold-Customize-these-elements-to-display-your-products-or-services-in-the-best-way-possible
+            - How-do-I-pay-for-the-service?
+            - How-do-I-use-the-service?
             - Large-image-or-video-block
+            - Let-your-customers-know-if-they-can-pay-by-EFTPOS-or-credit-card
+            - Sometimes-you-only-need-a-small-amount-of-text-An-icon-section-within-a-card-grid-is-a-great-option-to-showcase-your-content
             - Tag-or-label-headline
+            - These-versatile-cards-can-be-used-to-talk-about-your-services-or-products-or-anything-else-you-are-keen-to-share-with-your-audience
             - icon-card
         - heading: Already translated (fr)
           comment: "[booking/](https://frank-hare.cloudvent.net/booking/)  //  [Git
@@ -67,6 +75,21 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Booking%20form\
       )"
+  Customers-want-to-know-all-the-information-before-making-a-final-decision-Make-sure-you-provide-it-to-them:
+    label: Customers want to know all the information...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=Customers%20wa\
+      nt%20to,it%20to%20them)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: >
+        Customers want to know all the information before making a final
+        decision. Make sure you provide it to them.
   Eyebrow-Heading:
     label: Eyebrow Heading
     hidden: false
@@ -75,6 +98,21 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Eyebrow%20Head\
       ing)"
+  Have-a-strong-visual-element-you-want-to-share?-This-component-gives-you-the-flexibility-to-either-add-a-YouTube-video-or-an-image:
+    label: Have a strong visual element you want to s...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=Have%20a%20str\
+      ong,or%20an%20image)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: >
+        Have a strong visual element you want to share? This component gives you
+        the flexibility to either add a YouTube video or an image.
   Heading:
     label: Heading
     hidden: false
@@ -82,6 +120,37 @@ _inputs:
     options: {}
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Heading)"
+  Here-are-a-few-options-to-use-above-the-fold-Customize-these-elements-to-display-your-products-or-services-in-the-best-way-possible:
+    label: Here are a few options to use above the fo...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=Here%20are%20a\
+      ,best%20way%20possible)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: >
+        Here are a few options to use above the fold. Customize these elements
+        to display your products or services in the best way possible.
+  How-do-I-pay-for-the-service?:
+    label: "**How do I pay for the service?**"
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=How,for%20the%\
+      20service)"
+  How-do-I-use-the-service?:
+    label: "**How do I use the service?**"
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=**How%20do%20I\
+      %20use%20the%20service?**)"
   Large-image-or-video-block:
     label: Large image or video block
     hidden: false
@@ -90,6 +159,35 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Large%20image%\
       20or%20video%20block)"
+  Let-your-customers-know-if-they-can-pay-by-EFTPOS-or-credit-card:
+    label: Let your customers know if they can pay by...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=Let%20your%20c\
+      ustomers,or%20credit%20card)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: |
+        Let your customers know if they can pay by EFTPOS or credit card.
+  Sometimes-you-only-need-a-small-amount-of-text-An-icon-section-within-a-card-grid-is-a-great-option-to-showcase-your-content:
+    label: Sometimes you only need a small amount of ...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=Sometimes%20yo\
+      u%20only,showcase%20your%20content)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: >
+        Sometimes you only need a small amount of text. An icon section within a
+        card grid is a great option to showcase your content.
   Tag-or-label-headline:
     label: Tag or label headline
     hidden: false
@@ -98,6 +196,21 @@ _inputs:
     comment: "[See in
       context](https://frank-hare.cloudvent.net/booking/#:~:text=Tag%20or%20lab\
       el%20headline)"
+  These-versatile-cards-can-be-used-to-talk-about-your-services-or-products-or-anything-else-you-are-keen-to-share-with-your-audience:
+    label: These versatile cards can be used to talk ...
+    hidden: false
+    type: textarea
+    options: {}
+    comment: "[See in
+      context](https://frank-hare.cloudvent.net/booking/#:~:text=These%20versat\
+      ile%20cards,with%20your%20audience)"
+    context:
+      open: false
+      title: Untranslated Text
+      icon: translate
+      content: >
+        These versatile cards can be used to talk about your services or
+        products, or anything else you are keen to share with your audience.
   icon-card:
     label: icon card
     hidden: false
@@ -111,8 +224,16 @@ A-simple-text-block-for-your-FAQs: ""
 An-icon-card-grid: ""
 Bite-sized-information: ""
 Booking-form: ""
+Customers-want-to-know-all-the-information-before-making-a-final-decision-Make-sure-you-provide-it-to-them: ""
 Eyebrow-Heading: ""
+Have-a-strong-visual-element-you-want-to-share?-This-component-gives-you-the-flexibility-to-either-add-a-YouTube-video-or-an-image: ""
 Heading: ""
+Here-are-a-few-options-to-use-above-the-fold-Customize-these-elements-to-display-your-products-or-services-in-the-best-way-possible: ""
+How-do-I-pay-for-the-service?: ""
+How-do-I-use-the-service?: ""
 Large-image-or-video-block: ""
+Let-your-customers-know-if-they-can-pay-by-EFTPOS-or-credit-card: ""
+Sometimes-you-only-need-a-small-amount-of-text-An-icon-section-within-a-card-grid-is-a-great-option-to-showcase-your-content: ""
 Tag-or-label-headline: ""
+These-versatile-cards-can-be-used-to-talk-about-your-services-or-products-or-anything-else-you-are-keen-to-share-with-your-audience: ""
 icon-card: ""
