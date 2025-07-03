@@ -12,7 +12,12 @@ import rehypeFormat from "rehype-format";
 import { unified } from "unified";
 import { visit } from "unist-util-visit";
 
-// Find all of the .html pages in the build output
+// TODO: Find all of the .html pages in the build output
+//// Scan the output build dir
+//// Walk directories looking for .html files
+//// Each time we find one run the main function over it
+//// Write it to the place we found it
+
 // Parse the page looking for elements with the property of dataRoseyTagger
 // Walk the contents of the element we find the tag on
 // Keep walking its children until we find the most nested block elements
@@ -25,20 +30,16 @@ import { visit } from "unist-util-visit";
 // Sanitise the html
 // Parse the AST back into html and write it back to where we found it
 
-// TODO:
-// Test with more whacky block level elements like address, figcaption etc.
-// Is there ones we want to disallow from a tag, eg. pre/code?
-//// Might be in the middle of a markdown block, meaning the dev would tag the whole block
-//// but wouldn't necessarily want these to appear in translations
-
 const tagNameToLookFor = "dataRoseyTagger"; // Prop names are camelCased
-const testPagePath = "rosey-tagger/test-files/index-reduced.html";
+const testPagePath = "rosey-tagger/test-files/index-basic.html";
 const testPageToWritePath = "rosey-tagger/index.html";
 const logStatistics = {
   tagsAdded: {},
   inlineElementsFound: {},
 };
 
+// Used for checking whether there are further nested elements in an element
+// If any of these are the children in an element, we know to keep walking
 const blockLevelElements = [
   "div",
   "h1",
@@ -51,6 +52,23 @@ const blockLevelElements = [
   "ol",
   "ul",
   "li",
+  "address",
+  "article",
+  "aside",
+  "blockquote",
+  "fieldset",
+  "figcaption",
+  "figure",
+  "footer",
+  "form",
+  "header",
+  "main",
+  "nav",
+  "noscript",
+  "section",
+  "table",
+  "tfoot",
+  "video",
 ];
 
 // Main function
@@ -107,8 +125,6 @@ function tagHtmlWithDataTags() {
 
 function walkChildren(node) {
   for (const child of node.children) {
-    // TODO: Test putting the auto tag on something that has both text inside it and has children -
-    //// could be a bug here where we're only checking the childs children (maybe not though because even plain text is a child)
     if (!nodeIsWhiteSpace(child) && child.children) {
       // Keep walking until we find the most nested block elements
       if (hasNestedBlockElements(child.children)) {
